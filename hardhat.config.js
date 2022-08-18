@@ -42,6 +42,12 @@ module.exports = {
             chainId: 4,
             blockConfirmations: 6,
         },
+        goerli: {
+            url: process.env.GOERLI_RPC_URL || "",
+            chainId: 5,
+            accounts:
+            process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+        },        
     },
     solidity: {
         compilers: [
